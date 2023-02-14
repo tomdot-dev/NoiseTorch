@@ -28,5 +28,5 @@ release: rnnoise
 	rm -rf tmp/
 	go run scripts/signer.go -s -f bin/NoiseTorch_x64_${VERSION}.tgz
 rnnoise:
-	git submodule update --init --recursive
+	-git submodule update --init --recursive
 	$(MAKE) -C c/ladspa
